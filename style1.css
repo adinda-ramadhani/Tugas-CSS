@@ -1,0 +1,112 @@
+/* ===================================================
+   KETERANGAN SYARAT TUGAS:
+   - Grouping selector: h1, h2
+   - Descendant selector: ul li
+   - Pseudo-class :hover: ul li:hover
+   - Format Warna 1 (Nama Warna): HotPink, Pink, White, Moccasin
+   - Format Warna 2 (HEX Color): #fde8ed, #ffffff, #884d57, #c25975, #fad2e1
+   =================================================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fde8ed; /* HEX Color */
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-menu {
+    background-color: #ffffff; /* HEX Color */
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(194, 89, 117, 0.15);
+    border: 3px solid Pink; /* Named Color */
+}
+
+/* Grouping Selector: Styling h1 dan h2 sekaligus */
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Font Family */
+    text-align: center;                    /* Text Align */
+    color: #c25975;                        /* HEX Color */
+}
+
+.judul-toko {
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.sub-judul {
+    text-align: center;
+    color: HotPink; /* Named Color */
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 2px dashed #fad2e1; /* HEX Color */
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Descendant Selector: Mengatur elemen li di dalam ul */
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class :hover: Efek pas kursor diarahin ke menu */
+ul li:hover {
+    background-color: Pink; /* Named Color */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nama-item {
+    font-weight: 500;
+    color: #884d57; /* HEX Color */
+    font-size: 15px;
+}
+
+.deskripsi {
+    font-size: 11px;
+    color: #a3727c; /* HEX Color */
+    margin-top: 2px;
+}
+
+.harga {
+    font-weight: 600;
+    color: #c25975; /* HEX Color */
+    font-size: 14px;
+}
+
+/* Efek ganti warna teks saat di-hover */
+ul li:hover .nama-item,
+ul li:hover .deskripsi,
+ul li:hover .harga {
+    color: White; /* Named Color */
+}
